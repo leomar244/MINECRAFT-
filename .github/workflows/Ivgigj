@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FF ULTRA FLOATING</title>
+
+<style>
+
+body{
+    margin:0;
+    background:#0f0f0f;
+    color:white;
+    font-family:Arial;
+}
+
+.topo{
+    background:orange;
+    color:black;
+    padding:20px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.container{
+    padding:15px;
+}
+
+.card{
+    background:#1b1b1b;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 0 20px orange;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    margin-top:10px;
+    border:none;
+    border-radius:12px;
+    background:orange;
+    color:black;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.status{
+    margin-top:20px;
+    text-align:center;
+    color:#00ff99;
+    font-size:18px;
+}
+
+/* BOTÃO FLUTUANTE */
+
+.float-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:orange;
+    color:black;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    box-shadow:0 0 20px orange;
+}
+
+.float-menu{
+    display:none;
+    position:fixed;
+    right:20px;
+    bottom:100px;
+    width:220px;
+    background:#1b1b1b;
+    padding:15px;
+    border-radius:20px;
+    box-shadow:0 0 20px orange;
+}
+
+.float-menu button{
+    margin-top:8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topo">
+FF ULTRA PANEL
+</div>
+
+<div class="container">
+<div class="card">
+
+<button onclick="ativar('FPS 60')">FPS 60</button>
+<button onclick="ativar('FPS 90')">FPS 90</button>
+<button onclick="ativar('FPS 120')">FPS 120</button>
+<button onclick="ativar('FPS 360 Visual')">FPS 360 Visual</button>
+
+<button onclick="ativar('Turbo FPS')">Turbo FPS</button>
+<button onclick="ativar('Ultra Performance')">Ultra Performance</button>
+<button onclick="ativar('Modo Competitivo')">Modo Competitivo</button>
+<button onclick="ativar('Modo Elite')">Modo Elite</button>
+<button onclick="ativar('Modo Streamer')">Modo Streamer</button>
+
+<button onclick="ativar('Treino de Mira')">Treino de Mira</button>
+<button onclick="ativar('Sensi Ultra')">Sensi Ultra</button>
+<button onclick="ativar('Sensi Precisa')">Sensi Precisa</button>
+<button onclick="ativar('Sensi Rápida')">Sensi Rápida</button>
+
+<button onclick="ativar('HUD Vermelha')">HUD Vermelha</button>
+<button onclick="ativar('HUD Azul')">HUD Azul</button>
+<button onclick="ativar('HUD Roxa')">HUD Roxa</button>
+
+<button onclick="ativar('Tema Neon')">Tema Neon</button>
+<button onclick="ativar('Tema Escuro')">Tema Escuro</button>
+<button onclick="ativar('Glow Gamer')">Glow Gamer</button>
+
+<button onclick="ativar('Booster RAM')">Booster RAM</button>
+<button onclick="ativar('Anti Lag')">Anti Lag</button>
+<button onclick="ativar('Ultra Som')">Ultra Som</button>
+
+<button onclick="ativar('Painel VIP')">Painel VIP</button>
+<button onclick="ativar('Config PRO')">Config PRO</button>
+<button onclick="ativar('Visual Gamer')">Visual Gamer</button>
+
+<button onclick="ativar('Tela Full')">Tela Full</button>
+<button onclick="ativar('Touch PRO')">Touch PRO</button>
+<button onclick="ativar('Painel Rápido')">Painel Rápido</button>
+
+<button onclick="ativar('Energia Gamer')">Energia Gamer</button>
+<button onclick="ativar('Modo Noite')">Modo Noite</button>
+<button onclick="ativar('Efeito Flash')">Efeito Flash</button>
+
+<button onclick="ativar('Ultra Color')">Ultra Color</button>
+<button onclick="ativar('Max Gamer')">Max Gamer</button>
+<button onclick="ativar('Painel Lendário')">Painel Lendário</button>
+<button onclick="ativar('Ultra Touch')">Ultra Touch</button>
+<button onclick="ativar('Aim Training')">Aim Training</button>
+
+<div class="status" id="status">
+Sistema iniciado...
+</div>
+
+</div>
+</div>
+
+<!-- FLUTUANTE -->
+
+<div class="float-btn" onclick="abrirMenu()">
+⚡
+</div>
+
+<div class="float-menu" id="menu">
+
+<button onclick="ativar('Turbo FPS')">Turbo FPS</button>
+<button onclick="ativar('Sensi Ultra')">Sensi Ultra</button>
+<button onclick="ativar('HUD Neon')">HUD Neon</button>
+<button onclick="ativar('Painel VIP')">Painel VIP</button>
+<button onclick="ativar('Modo Elite')">Modo Elite</button>
+
+</div>
+
+<script>
+
+function ativar(nome){
+    document.getElementById("status").innerHTML =
+    nome + " ativado!";
+}
+
+function abrirMenu(){
+
+    let menu = document.getElementById("menu");
+
+    if(menu.style.display == "block"){
+        menu.style.display = "none";
+    }else{
+        menu.style.display = "block";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
